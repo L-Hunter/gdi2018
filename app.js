@@ -1,2 +1,10 @@
-const exp = require('express');
-console.log("express requiring file");
+const express = require('express');
+var app = express();
+
+app.get('/', function(req, res) {
+    res.send('Welcome to the GDI Node Workshop!');
+});
+
+app.listen(3000, function() {
+    console.log('Your app is listening on port 3000!');
+});
